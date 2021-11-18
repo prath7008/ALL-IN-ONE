@@ -1,0 +1,15 @@
+npm install request
+
+
+// const url =
+//   "http://api.weatherstack.com/current?access_key=2c91fa64d5fbc35603c728f1bbe3a7fc&query=New York";
+
+// request({ url: url, json: true }, (error, response) => {
+//   if (error) {
+//     console.log("Unable to connect to Internet Service");
+//   } else if (response.body.error) {
+//     console.log("Unable to find Location");
+//   } else {
+//     console.log(response.body.current);
+//   }
+// });

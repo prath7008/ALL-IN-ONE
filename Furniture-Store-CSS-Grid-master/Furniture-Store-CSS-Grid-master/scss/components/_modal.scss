@@ -1,0 +1,108 @@
+.modal {
+    position: fixed; 
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: #efefef;
+    padding: 2rem;
+    width: 50rem;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .3);
+    display: none;
+
+    &__input {
+        margin-bottom: 1rem;
+    }
+
+    &__btn {
+        width: 15rem;
+        height: 3.5rem;
+    }
+
+    &__close {
+        position: absolute; 
+        bottom: 2rem;
+        right: 2rem;
+        font-size: 1.6rem;
+        color: $main-color;
+        cursor: pointer; 
+
+        &:hover {
+            color: $main-color-lighter;
+        }
+    }
+}
+
+.btn-groups {
+    display: flex;
+    
+    &__btn {
+        flex-basis: 50%;
+        padding: 1rem 0;
+        border: .1rem solid white;
+        text-align: center;
+    }    
+}
+
+.signup-form {
+
+    &__groups {
+        display: flex;
+
+        & input {
+            flex-basis: 50%;
+
+            &:first-child {
+                margin-right: .3rem;
+            }
+        }        
+    }
+}
+
+.login-form {
+    display: none;
+}
+
+.title-form {
+    font-size: 1.6rem;
+    color: $main-color;
+    text-transform: uppercase;
+    margin: 2rem 0 1rem 0;
+}
+
+#toggleForm {
+    display: none;
+
+    &:checked ~ .login-form {
+        display: block;
+    }
+
+    &:checked ~ .signup-form {
+        display: none;
+    }
+
+    &:checked ~ .btn-groups .btn-groups__login,
+    &:not(:checked) ~ .btn-groups .btn-groups__signup {
+        pointer-events: none;
+        background: $main-color-lighter;
+        color: #999;
+    }
+
+    &:checked ~ .btn-groups .btn-groups__signup {
+        pointer-events: initial;
+    }
+}
+
+#toggleModalBox {
+    display: none;
+    
+    &:checked ~ .modal {
+        display: block; 
+    }
+
+    &:checked ~ .container {
+        pointer-events: none;
+        opacity: .6;
+    }
+}
+

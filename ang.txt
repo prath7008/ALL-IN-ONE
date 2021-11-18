@@ -1,0 +1,30 @@
+npm modules
+
+Angular is a javascript framework which allows to create single page Applications
+
+components euther maually of using CLI
+ 
+14th  video : main - app module - app component - index - app component.html
+15 th video : Expanation of component
+
+16th video :  create server component(server file created)
+17-18th  video : display of server component 
+
+19th          ng g c servers
+
+20th videro: servers.component.ts -- template-app-server
+
+
+24 th : Databinding = Communication 
+	output data = 
+	1.String Interpolation
+	2. Property Binding
+	
+	React to user events
+	1.Event Binding
+
+
+PART 1: CREATIO OF COMPONENTS
+PART 2: STUDIED DATA BINDING
+PART3 : DIRECTIVES
+

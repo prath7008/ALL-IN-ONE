@@ -1,0 +1,36 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Alegreya', serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-heading {
+    font-size: 4rem;
+    color: #12367e;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: $largest-bp) {
+        font-size: 3.5rem;
+    } 
+
+    @media only screen and (max-width: $second-bp) {
+        font-size: 3.0rem;
+    } 
+
+    @media only screen and (max-width: $third-bp) {
+        font-size: 2.5rem;
+    } 
+}

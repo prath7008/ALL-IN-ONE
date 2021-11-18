@@ -1,0 +1,15 @@
+.bestsellings {
+    grid-row: 6 / 7;
+    grid-column: 2 / 10;    
+
+    &__heading {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 6.4rem;
+    }
+}

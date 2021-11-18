@@ -1,0 +1,36 @@
+.btn {    
+    font-size: 1.6rem;
+    cursor: pointer;
+    background: linear-gradient(to top, #12367e, #34598f);
+    color: white;
+    border: none;    
+    outline: none;
+    transition: all .2s;
+
+    &--block {
+        display: block;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    &--rounded {
+
+    }
+
+    &--squared {
+        height: 5rem;
+        width: 16rem;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--oranged {
+        background: #d38800;
+    }
+
+    &:hover {
+        background: linear-gradient(to bottom, #12367e, #34598f);
+    }
+}

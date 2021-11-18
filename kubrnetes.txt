@@ -1,0 +1,50 @@
+CONTAINERS : - 
+
+
+A runtime instance of a docker image contains three things:-
+
+1. A docker Image
+
+2. An execution Environment
+
+3. A standard set of instructions
+
+							////////////------------Containers ----------------------------\\\\\\\\\\\\
+							
+....Container is an object and classes is an Docker image
+
+....Core elements of Docker Ecosystem are Docker Engine and Docker Store
+
+			Docker Engine											Docker Store
+			
+		. Compromised of the runtime 						. An online cloud service where user can store and share docker images
+		  and packaging tool
+		  
+		. Must be installed on the host						. Also known as docker hub 
+		  that run Docker
+		  
+		  
+.... Developers like them because it's easy to create applications that are portable and packaged in a standard way.
+ They also make the process of deployment very easy and repeatable. Testing, packaging, and integrations can be automated in an easier way than before. 
+ Containers support newer microservices architectures, which fit better from a developer mindset.
+ And finally, containers help alleviate platform compatibility issues.
+ 
+ From a DevOps standpoint, using containers simplifies release management. Deployments become much more reliable, which improves the speed 
+ and frequency of releases. The application lifecycle is consistent. 
+ They can be configured once and run multiple times, making the process more repeatable and efficient. 
+ Environments can be made more consistent. No more process differences between the dev, staging, and production environments. 
+ Scaling applications also becomes a lot simpler.
+ Containers take a few seconds to deploy to a host, which makes the process of adding extra workers easier and the workload can grow and shrink more quickly for on-demand use cases. One of the biggest value adds of using container technologies in an enterprise is that developers and DevOps team now have a common language to collaborate.
+ Both sets of teams can describe their needs and architectures in terms of containers using the same vocabulary for dev and deployment		  
+		  
+		  
+.... containers assist with code agility and help you build a continuous integration or continuous deployment pipeline. 
+This use case really pushes an IT team to develop, test, and deploy applications faster in a more automated fashion. 
+Hopefully by now it's clear why enterprises have started to adopt containers in such a big way. 
+Now that we understand what containers are all about, let's see where Kubernetes plays a role.		  
+
+		  
+								//////////////-----------Kubernetes---------------\\\\\\\\\\\\\\\\\\
+
+
+									

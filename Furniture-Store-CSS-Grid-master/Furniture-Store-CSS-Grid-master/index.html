@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+
+    <input type="checkbox" id="toggleModalBox">
+
+    <div class="modal">
+        <input type="checkbox" id="toggleForm">
+        <label for="toggleModalBox" class="modal__close">X</label>
+        <div class="btn-groups">
+            <label class="btn btn--uppercase btn-groups__btn btn-groups__signup" for="toggleForm">Sign Up</label>
+            <label class="btn btn--uppercase btn-groups__btn btn-groups__login" for="toggleForm">Login</label>
+        </div>
+        <form class="signup-form">
+            <h3 class="title-form">Sign Up</h3>
+            <div class="signup-form__groups">
+                <input class="input-form modal__input" type="text" name="firstNameSignUp" placeholder="Firstname">
+                <input class="input-form modal__input" type="text" name="lastNameSignUp" placeholder="Lastname">
+            </div>
+            <input class="input-form modal__input" type="text" name="userNameSignUp" placeholder="Username">
+            <input class="input-form modal__input" type="email" name="emailSignUp" placeholder="Email">
+            <input class="input-form modal__input" type="password" name="passwordSignUp" placeholder="Password">
+            <button class="btn btn--oranged modal__btn">Sign Up</button>
+        </form>
+        <form class="login-form">
+            <h3 class="title-form">Log In</h3>
+            <input class="input-form modal__input" type="text" name="userNameLogin" placeholder="Username / Email">
+            <input class="input-form modal__input" type="password" name="passwordLogin" placeholder="Password">
+            <button class="btn btn--oranged modal__btn">Login</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <ul class="social-nav">
+            <li class="social-nav__item"><a class="social-nav__link" href="#"><i class="fab fa-facebook social-nav__icon"></i></a></li>
+            <li class="social-nav__item"><a class="social-nav__link" href="#"><i class="fab fa-linkedin social-nav__icon"></i></a></li>
+            <li class="social-nav__item"><a class="social-nav__link" href="#"><i class="fab fa-twitter-square social-nav__icon"></i></a></li>
+            <li class="social-nav__item"><a class="social-nav__link" href="#"><i class="fab fa-instagram social-nav__icon"></i></a></li>
+        </ul>
+        <ul class="functional-nav">
+            <li><a class="functional-nav__link" href="#"><label for="toggleModalBox"><i class="functional-nav__icon fas fa-sign-in-alt"></i>Sign Up
+                    / Log In</label></a></li>
+            <li><a class="functional-nav__link" href="#"><i class="functional-nav__icon fas fa-shopping-cart"></i>Cart</a></li>
+            <li><a class="functional-nav__link" href="#"><i class="functional-nav__icon fas fa-truck"></i>Order</a></li>
+            <li><a class="functional-nav__link" href="#"><i class="functional-nav__icon fas fa-truck"></i>Wish List</a></li>
+        </ul>
+        <form class="search-nav">
+            <label for="searchNavInput"></label>
+            <input class="search-nav__input" type="text" name="searchTerm" id="searchNavInput" placeholder="Search">
+            <button class="search-nav__btn" type="submit"><i class="fas fa-search search-nav__icon"></i></button>
+        </form>
+        <ul class="main-nav">
+            <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Furniture</a>
+                <div class="dropdown">
+                    <ul class="dropdown__list dropdown__list--first">
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Sofas</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Sectionals</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Daybeds & Chaises</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Consolas & Credenzas</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Chairs</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Benches & Ottomans</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Dressers & Chests</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Dining Tables</a></li>
+                    </ul>
+                    <ul class="dropdown__list dropdown__list--second">
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Lampert</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Baxter</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Channing</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Maxime</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Talitha</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Rider</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link" href="#">Goldfinger</a></li>
+                    </ul>
+                    <img class="dropdown__img" src="images/dropdown-image.jpg" alt="DROPDOWN IMAGE">
+                </div>
+            </li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Rooms</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Kitchen</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Outdoor</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Lighting</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Bed & Bath</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Window</a></li>
+        </ul>
+        <div class="banner">
+            <div class="banner__content">
+                <h1 class="banner__heading">Great Sell</h1>
+                <button class="banner__btn">
+                    <span class="banner__btn-text banner__btn-text--1">Show Now!</span>
+                    <span class="banner__btn-text banner__btn-text--2">It's interesting!</span>
+                </button>
+            </div>
+
+            <div class="slideshow">
+                <button class="slideshow__btn slideshow__btn--1"></button>
+                <button class="slideshow__btn slideshow__btn--2"></button>
+                <button class="slideshow__btn slideshow__btn--3"></button>
+                <button class="slideshow__btn slideshow__btn--4"></button>
+                <div class="slideshow__wrapper">
+                    <div class="slideshow__item">
+                        <img class="slideshow__img" src="/images/slide-img-1.jpg" alt="SLIDE IMAGE 1">
+                    </div>
+                    <div class="slideshow__item">
+                        <img class="slideshow__img" src="/images/slide-img-2.jpg" alt="SLIDE IMAGE 1">
+                    </div>
+                    <div class="slideshow__item">
+                        <img class="slideshow__img" src="/images/slide-img-3.jpg" alt="SLIDE IMAGE 3">
+                    </div>
+                    <div class="slideshow__item">
+                        <img class="slideshow__img" src="/images/slide-img-4.jpg" alt="SLIDE IMAGE 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="day-offer">
+            <img class="day-offer__img day-offer__img--1" src="images/day-offer-img-one.jpg" alt="DAY OFFER 1">
+            <h2 class="day-offer__heading">Day Offer</h2>
+            <p class="day-offer__paragraph">Feel better with new furniture</p>
+            <button class="btn day-offer__btn">Show Now</button>
+            <img class="day-offer__img day-offer__img--2" src="images/day-offer-img-two.jpg" alt="DAY OFFER 2">
+        </section>
+
+        <section class="bestsellings section">
+            <h2 class="section-heading bestsellings__heading">Bestselling Furniture</h2>
+            <div class="bestsellings__list">
+                <div class="bestselling-card bestsellings__item">
+                    <img class="bestselling-card__img" src="images/bestsellig-furniture-kitchen.jpg" alt="KITCHEN Bestselling">
+                    <h3 class="bestselling-card__title">Kitchen</h3>
+                    <p class="bestselling-card__price">price: $15,000</p>
+                    <button class="bestselling-card__btn btn btn--block">Buy Now</button>
+                </div>
+                <div class="bestselling-card bestsellings__item">
+                    <img class="bestselling-card__img" src="images/bestsellig-furniture-wardrobe.jpg" alt="Wardrobe Bestselling">
+                    <h3 class="bestselling-card__title">Wardrobe</h3>
+                    <p class="bestselling-card__price">price: $10,000</p>
+                    <button class="bestselling-card__btn btn btn--block">Buy Now</button>
+                </div>
+                <div class="bestselling-card bestsellings__item">
+                    <img class="bestselling-card__img" src="images/bestsellig-furniture-sofa.jpg" alt="Sofa Bestselling">
+                    <h3 class="bestselling-card__title">Sofa</h3>
+                    <p class="bestselling-card__price">price: $20,000</p>
+                    <button class="bestselling-card__btn btn btn--block">Buy Now</button>
+                </div>
+                <div class="bestselling-card bestsellings__item">
+                    <img class="bestselling-card__img" src="images/bestsellig-furniture-table.jpg" alt="Table Bestselling">
+                    <h3 class="bestselling-card__title">Table</h3>
+                    <p class="bestselling-card__price">price: $9,000</p>
+                    <button class="bestselling-card__btn btn btn--block">Buy Now</button>
+                </div>
+                <div class="bestselling-card bestsellings__item">
+                    <img class="bestselling-card__img" src="images/bestsellig-furniture-bed.jpg" alt="Bed Bestselling">
+                    <h3 class="bestselling-card__title">Bed</h3>
+                    <p class="bestselling-card__price">price: $7,000</p>
+                    <button class="bestselling-card__btn btn btn--block">Buy Now</button>
+                </div>
+                <div class="bestselling-card bestsellings__item">
+                    <img class="bestselling-card__img" src="images/bestsellig-furniture-chairs.jpg" alt="Chairs Bestselling">
+                    <h3 class="bestselling-card__title">Chairs</h3>
+                    <p class="bestselling-card__price">price: $4,000</p>
+                    <button class="bestselling-card__btn btn btn--block">Buy Now</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section gallery">
+            <img src="images/gallery-img-1.jpeg" alt="gallery image 1" class="gallery__img gallery__img--1">
+            <img src="images/gallery-img-2.jpeg" alt="gallery image 2" class="gallery__img gallery__img--2">
+            <img src="images/gallery-img-3.jpeg" alt="gallery image 3" class="gallery__img gallery__img--3">
+            <img src="images/gallery-img-4.jpeg" alt="gallery image 4" class="gallery__img gallery__img--4">
+            <img src="images/gallery-img-5.jpeg" alt="gallery image 5" class="gallery__img gallery__img--5">
+            <img src="images/gallery-img-6.jpeg" alt="gallery image 6" class="gallery__img gallery__img--6">
+            <img src="images/gallery-img-7.jpeg" alt="gallery image 7" class="gallery__img gallery__img--7">
+            <img src="images/gallery-img-8.jpeg" alt="gallery image 8" class="gallery__img gallery__img--8">
+            <img src="images/gallery-img-9.jpeg" alt="gallery image 9" class="gallery__img gallery__img--9">
+            <img src="images/gallery-img-10.jpeg" alt="gallery image 10" class="gallery__img gallery__img--10">
+            <img src="images/gallery-img-11.jpeg" alt="gallery image 11" class="gallery__img gallery__img--11">
+            <img src="images/gallery-img-12.jpeg" alt="gallery image 12" class="gallery__img gallery__img--12">
+        </section>
+
+        <section class="contact section">
+            <h3 class="contact__heading">Join us and be in the know</h3>
+            <form class="contact__form">
+                <label for="emailContactInput"></label>
+                <input type="email" id="emailContactInput" class="contact__email-input">
+                <button class="btn contact__submit-btn">Sign Up</button>
+            </form>
+        </section>
+
+        <footer class="footer section">
+            <p class="footer__copyright">&copy; vnscriptkid. All rights reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>

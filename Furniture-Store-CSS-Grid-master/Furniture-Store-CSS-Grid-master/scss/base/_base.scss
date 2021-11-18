@@ -1,0 +1,46 @@
+*,
+*::before, 
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+// breakpoints
+$largest-bp: 62.5em; // 1000px
+$second-bp: 54.375em; // 870px
+$third-bp: 48.125em; // 767px
+$forth-bp: 38.125em; // 610px
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+    grid-template-rows: repeat(3, min-content) 70vh min-content min-content;
+    grid-row-gap: 1.6rem;
+    margin-top: 1.6rem;
+
+    @media only screen and (max-width: $largest-bp) {
+        grid-template-columns: minmax(3rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(3rem, 1fr);  
+    } 
+}
+
+.section {
+    padding: 2rem 0 2rem 0;
+
+    @media only screen and (max-width: $third-bp) {
+        padding: 1rem 0 1rem 0;
+    } 
+}
+
+.input-form {
+    display: block;
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    outline: none;
+}

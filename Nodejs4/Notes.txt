@@ -1,0 +1,144 @@
+authentication
+
+.\/mongod.exe --dbpath=../../../mongodb-data
+
+install robo3t
+  
+Drivers 
+
+npm i mongodb
+
+
+   db.collection("users").insertMany(
+      [
+        {
+          name: "Jen",
+          age: 28,
+        },
+        {
+          name: "Gunther",
+          age: 27,
+        },
+      ],
+      (error, result) => {
+        if (error) {
+          console.log("Unable to insert Documents");
+        }
+        console.log(result.ops);
+      }
+    );
+  }
+);
+
+
+
+/------/
+  db.collection("users").findOne({ name: "Mike" }, (error, user) => {
+      if (error) {
+        console.log("UNABLE TO FETCH");
+      }
+      console.log(user);
+    });
+
+
+/---/
+db.collection("users").findOne(
+      { _id: new ObjectID("616ecb98307e98e59dafad45") },
+      (error, user) => {
+        if (error) {
+          return console.log("UNABLE TO FETCH");
+        }
+        console.log(user);
+      }
+    );
+
+/---/
+        db.collection("users")
+      .find({ age: 27 })
+      .toArray((error, user) => {
+        console.log(user);
+      });
+    db.collection("users")
+      .find({ age: 27 })
+      .count((error, count) => {
+        console.log(count);
+      });
+
+/---/      
+    const updatePromise = db.collection("users").updateOne(
+      {
+        _id: new ObjectID("616ec6a28d01fa13db7c5b99"),
+      },
+      {
+        $set: {
+          name: "Andrew",
+        },
+      }
+    );
+    updatePromise
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+UPDATE OPERATORS
+/--/
+ const updatePromise = db.collection("users").updateOne(
+      {
+        _id: new ObjectID("616ec6a28d01fa13db7c5b99"),
+      },
+      {
+        $inc: {
+          age: 1,
+        },
+      }
+    );
+    updatePromise
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+/--/
+db.collection('tasks).updateMany({
+  completed: false
+},{
+  $set:{
+    completed:true,
+  }
+}
+).then((result)=>{
+  console.log(result)
+}).catch((error)=>{
+  console.log(error)
+})
+
+
+
+/---/
+
+ db.collection("user")
+      .deleteMany({
+        age: 27,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+/----/
+
+db.collection('')
+.deleteOne({age:21}).then((result)=>{
+  console.log(result)
+}).catch((error)=>{
+  console.log(error)
+})
+
+/--/

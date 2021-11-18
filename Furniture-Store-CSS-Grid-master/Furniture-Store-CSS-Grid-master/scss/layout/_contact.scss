@@ -1,0 +1,50 @@
+.contact {
+    grid-row: 8 / 9;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: $main-color;
+    grid-column-gap: 2.5rem; 
+    align-items: center;
+
+    @media only screen and (max-width: $forth-bp) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    &__heading {        
+        color: white;
+        justify-self: end;
+        font-size: 1.6rem;
+
+        @media only screen and (max-width: $forth-bp) {
+            justify-self: center;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__email-input {
+        padding: 1rem; 
+        font-size: 1.4rem;
+        border-radius: 2rem 0 0 2rem;
+        border: none;
+
+        @media only screen and (max-width: $third-bp) {
+            padding: .5rem;
+            font-size: 1.1rem;
+        }
+    }
+
+    &__submit-btn {
+        padding: 0 .7rem 0 .7rem;
+        border-radius: 0 2rem 2rem 0;
+
+        @media only screen and (max-width: $third-bp) {
+            font-size: 1.3rem !important;
+        }
+    }
+}

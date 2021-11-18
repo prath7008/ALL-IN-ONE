@@ -1,0 +1,251 @@
+.... Web Performance Optimization
+
+1. Reducing Overall Load Time
+
+2. Making site usable as fast as possible 
+
+3. Smoothness and Interactivity
+
+4. Performance Measurements
+
+
+
+.... HOW to Measure Performance
+
+Browser Tools
+
+1. LightHouse (Chrome)
+
+2. Network Monitor
+
+3. Performance Monitor
+
+
+Hosted third-party Tools
+
+1. PageSpeed Insights (Chrome)
+
+2. WebPage Tests
+
+3. GTMetrics (actuaaly LightHouse)
+
+
+
+....Standard Performance Measure
+ 
+1. First Paint  - Time it takes before user sees changes happening in Browser
+
+2. Largest ContentFul Paint - Time it takes before user sees Content In Browser  ex- Images , 
+
+3. First Meaning Paint -  Time it takes before user sees Content which is actually Meaningful 
+
+4. Time to Interacive  -  Time it takes before content is finished loading and ui can be interacted with  eX-FORMS
+
+
+
+....LightHouse industry benchmark for performance monitoring
+
+
+... Good Performance is 
+			1. Better for ur visitors
+			2. Better for your Google Rankings
+			3. Better for You - (less Hosting and Traffic Expenses)
+			4. Better for Your Environment
+			
+.... How Browser Renders
+				Request from Browser to ISP TO DNS (TO MAP DOMAIN NAME WITH IP ADDRESS)
+				
+				Once ip address is established then TCP HANDSAKE(exchange identity) [Between Browser and Server]
+					Time to transfer first contentful paint
+				
+				Our aim to identify bottlenecks and add web performance improvements to get pass them as qquickl as possible
+
+...HTTP/2 and Multplexing
+			
+		Browser and Server use HTTP protocol to send and recieve data
+		HTTP 1.1  -  Synchronous Loading
+					one file at a time
+					HTML - CSS - JS 
+		ADVANCE HTTP2 Protocol
+		
+		HTTP/2 - Multiplexing 
+					Multiple files file at a time
+					
+					
+....Bottlenecks
+						
+		1. Server/hosting Bottlenecks                         Server/Hosting Optimization
+			
+			Processor Speed 									Get Sufficiently powerful hosting
+			Avaliable RAM										Explore dynamic cloud options
+			Storage Type										Optimize your files for the server
+			Avaliable Bandwidth 								Add a CDN to your service 
+			Shared Resources 	
+		
+				
+				
+		2. Connections
+		
+		Connection Issues								Connection Optimization
+		
+		DNS Lookup											Preconnect to Server
+		TCP handshake										Preload Content
+															Consider Server Push
+															Precache select assets
+															
+															
+		3. Sending Files
+
+			Sending Files								File Transmit Optimization
+			
+			Large JS/CSS bundles							Modularize JS and CSS 
+			Large Image Files								Take advantage of HTTP/2 and multiplexing
+															Async/Defer JS
+															Defer non-critical CSS
+															Lazy-load Images
+															Compress all files using Gzip and/or Brotli
+															
+															
+....Caching (Storing) Assets
+
+		1. On the Server 
+		2. On the CDN
+		3. On the Browser 
+		
+
+															
+															
+....THE PRPL Pattern
+										
+		1. Push (or preload) the most important resources
+		2. Render the initial route as soon as possible
+		3. Pre Cache remainig assets
+		4. Lazy load other route and non-critical assets
+		
+
+....Creating a Performance Budget
+		LightHouse- (LightWallet)
+		WebPack - (Performance)
+		
+.... Realistic Performance Budget
+		1. Speed index under 3 sec
+		
+		2. Time TTI interactive under 5sec
+		
+		3. Large ContentFul Paint under 1 sec
+		
+		4. Max Potential Input Delay under 130ms
+		
+		5. MAX 170KB Gzipped JavaScript Bundle
+		
+		6. Total Bundle size of 250kb
+		
+		7. All this on a low powererd 3G
+		
+		
+.... Common Performance Culprits
+		1. Images
+		2. JavaScript Bundles
+		3. External Web Fonts
+		
+		
+....Image Quality Matters
+	squoosh.in            (shallow depth of Field = Better Performance)
+	
+	Image Scaling (Increasing Image size by 115%)
+	
+....Image Formats 
+		1. JPG /JPEG
+		2. PNG
+		3. GIF
+		4. SVG
+		5. WEBP ALTERNATIVE TO JPEG
+		
+		For photos , use Webp or JPG
+		
+		For complex computer graphics use PNG or JPG
+		
+		For graphics with transparency use PNG or WebP
+		
+		For Scable computer graphics , icons and graphs use SVG
+		
+		Avoid Animated GIF if at all possible , use a video instead
+		
+		
+
+....Automate image Optimization
+			1. For Industry Standard image Optimiation - imagemin
+														 imagemin-mozjpeg
+														 imagemin-pngquant
+														 
+			2. Squoosh.in
+			3. 	sharp npm package
+			
+
+....Reponsive Image
+				Different size screen should have different images 
+
+....Lazy-Loading Images
+				Loading images only when necessary
+				
+				
+....JavaScript Loading Best Practices
+
+			1. Place <script> tag in <head>
+			2. Use async by default
+			3. Defer Scripts that need a fully built DOM
+			4. Not using async/defer is an anti-pattern
+			5. <script> tag in the footer is an anti-pattern
+			
+			
+....Lazy-Load JavaScript Modules
+
+
+
+.... Minifying anf uglifying JavaScript (default in bundlers in WebPack)
+				Uglify3 and terser (shortens code helps JS To RUN FASTER)
+				
+				
+....Critical CSS  
+			npm Critical package (defer loading of non critical Css)
+			
+			
+			
+
+
+....Web Fonts
+			&display = swap
+			
+			
+....SELF HOSTING FONTS
+			
+....Varaiable Fonts
+
+....Fons performance Budgets
+	Using a system font instead of Web Fonts
+	
+	Limit the number of font families
+	
+	Limit the number of weights and styles
+	
+	Pick the correct character set 
+	
+	
+.....OPTIMIIZING (File Compression)
+		1. Using Gzip and brotli
+		
+		
+....Server Push
+
+....Preload vs Prefetching
+
+....Browser Caching
+
+....CDN 
+		
+				
+				
+				
+			
+															
+		

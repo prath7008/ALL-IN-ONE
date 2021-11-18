@@ -1,0 +1,91 @@
+chrome extension
+redux devtools
+
+npm run text
+
+Test numbers with matchers
+
+const numItems= data.length;  //json data with Componens id's
+
+test('Numbers of items=12',()=>{
+	expect(numItems).toBe(11)
+});
+
+test('Number of items to be greater than or equal to 12',()=>{
+	expect(numItems).toBeGreaterThanOrEqual(12)
+})
+
+
+Test Strings with matchers
+//jUST CHECKS IF WE HAVE js IN THE STRING
+
+
+const dataTest = data[0].title
+
+test('There is a JS in the title', () => {
+  expect(dataTest).toMatch(/JS/)           //toContain('')
+})
+
+Test Arrays and Objects with Jest 
+
+const data = ['React Native','React']
+test('the list of courses contain React Native and react',()=>{
+	expect(['React Native','React','MeteorJS']).toEqual(expect.arrayContaining(data2))
+
+})
+
+ Objects
+test('The first courseto have a property title',()=>{
+	expect(data[0].toHaveProperty('title'))
+
+})
+
+Checking values 
+test('The first courseto have a property title and value of 31,266',()=>{
+	expect(data[0].toHaveProperty('views','31,266'))
+
+})
+
+
+Coverage
+
+"coverage": "npm run test -- --coverage" 
+
+npm run coverage
+
+
+
+Snapshot testing with Jest
+Check whether anything is changed
+
+npm i react-test-renderer
+
+
+test('App snapshot test',()=>{
+	const component = renderer.create(<App/>)
+	const tree = component.toJSON()
+	expect(tree).toMatchSnapshot()
+})
+//npm run test  press u to update snapshot 
+
+
+
+
+Describe
+
+Combine
+
+describe('Number test',()=>{
+	test('Numbers of items=12',()=>{
+		expect(numItems).toBe(11)
+	});
+
+	test('Number of items to be greater than or equal to 12',()=>{
+	expect(numItems).toBeGreaterThanOrEqual(12)
+	}) 
+})
+
+//Press  w to rerun 
+
+
+

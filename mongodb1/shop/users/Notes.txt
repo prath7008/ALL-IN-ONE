@@ -1,0 +1,13 @@
+DATA TYPES 
+            1. TEXT
+            2. BOOLEAN
+            3. NUMBER
+                Integer
+                NumberDecimal
+                NumberLong
+            4. OBJECT ID 
+            5. ISODATE
+            6. TIMESTAMP   
+            7. Embedded Document
+            8. Array
+

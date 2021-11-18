@@ -1,0 +1,34 @@
+const fs = require("fs");
+// fs.writeFileSync("notes1.txt", "This file was created by NodeJs");
+fs.appendFileSync("notes1.txt", "Hey new file");
+
+
+npm init 
+npm i validator
+
+
+
+core node modules
+our files 
+npm modules
+
+
+const validator = require("validator");
+
+console.log(validator.isEmail("andrewe@example.com"));
+console.log(validator.isURL("https://mead.io"));
+
+
+
+const chalk = require("chalk");
+
+console.log(chalk.green("Success"));
+console.log(chalk.green.inverse.bold("Success"));
+
+
+npm i nodemon -g
+nodemon app.js
+
+Notes-app
+1. Command Line Arguments FOR INPUTS
+2. File System

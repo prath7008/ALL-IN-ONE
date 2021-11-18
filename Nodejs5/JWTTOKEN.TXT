@@ -1,0 +1,15 @@
+3PARTS 
+FIRST PART: Metadata which describes what type of token it is.
+SECOND PART: PAYLOAD OR BODY BASE64ENCODED  STRING
+THIRD PART: SIGNATURE TO VERIFY TOKEN
+
+const jwt = require("jsonwebtoken");
+
+const myFunction = async () => {
+  const token = jwt.sign({ _id: "abc123" }, "thisismynewcourse",{expiresInL '7 days'});
+  console.log(token);
+
+  const data = jwt.verify(token, "thisismynewcourse");
+  console.log(data);
+};
+myFunction();

@@ -1,0 +1,24 @@
+//Without Middelware: Request -----> Run Route Handler
+
+//With Middelware: New Requet -----> Do Something ----------> Run Route Handler
+
+
+/---------/
+app.use((req, res, next) => {
+  if (req.method === "GET") {
+    console.log("GET REQUEST ARE DISABLED");
+  } else {
+    next();
+  }
+});
+
+
+/--------------------/
+
+
+app.use((req, res, next) => {
+  res.status(503).send("Site is currently down.Check back soon");
+});
+
+
+//------------------------///
